@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">M999</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">垃圾分类</string>
+    <string name="nav_header_subtitle">垃圾不落地，环境更美丽</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">主页</string>
+    <string name="menu_gallery">培训</string>
+    <string name="menu_slideshow">科普</string>
+
+    <string name="home_second">Home Second</string>
+</resources>
