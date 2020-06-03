@@ -6,21 +6,25 @@
     android:layout_height="match_parent"
 
     tools:context=".ui.home.HomeFragment">
-<!--    app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+
 
     <RelativeLayout
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="300dp"
         app:layout_constraintBottom_toTopOf="@+id/text_home"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        >
 
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/vp_banner"
             android:layout_width="match_parent"
-            android:layout_height="250dp">
+            android:layout_height="wrap_content"
+            android:layout_above="@id/viewGroup"
+            >
 
         </androidx.viewpager.widget.ViewPager>
 
@@ -28,11 +32,10 @@
             android:id="@+id/viewGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
             android:layout_marginBottom="3dp"
             android:orientation="horizontal">
-
         </LinearLayout>
 
     </RelativeLayout>
@@ -52,5 +55,68 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/framelayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/view_line" />
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@+id/r1_bottom"
+            android:background="#DCDBDB" />
+
+        <LinearLayout
+            android:id="@+id/r1_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#F2F2F2"
+            android:orientation="horizontal"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp" >
+        <TextView
+            android:id="@+id/tv_main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/tab_item_main_img_selector"
+
+            android:focusable="true"
+            android:text="@string/main"
+            android:textColor="@drawable/tabitem_txt_sel"/>
+            <ImageView
+                android:id="@+id/iv_make"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:paddingBottom="10dp"
+                android:src="@drawable/jxw"/>
+        <TextView
+            android:id="@+id/tv_dynamic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/tab_item_dynamic_img_selector"
+
+            android:focusable="true"
+            android:text="@string/dynamic"
+            android:textColor="@drawable/tabitem_txt_sel"/>
+        </LinearLayout>
+<!--        android:drawablePadding="@dimen/dynamic_tab_item_image_and_text"-->
+<!--        <View-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"/>-->
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

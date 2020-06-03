@@ -59,35 +59,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        // 轮播广告
-//        if (getActivity()==null) return root;
-//            View view=getActivity().getLayoutInflater().inflate(R.layout.fragment_home,container,false);
-//            vpBanner= (ViewPager) view.findViewById(R.id.vp_banner);
-//
-//            bannerAdapter=new BannerAdapter(getActivity());
-//            bannerAdapter.setOnBannerClickListener(onBannerClickListener);
-//            vpBanner.setOffscreenPageLimit(2);
-//            vpBanner.setAdapter(bannerAdapter);
-//            vpBanner.addOnPageChangeListener(onPageChangeListener);
-//            viewGroup= (ViewGroup) view.findViewById(R.id.viewGroup);
-//            for (int i=0;i<bannerAdapter.getBanners().length;++i){
-//                ImageView imageView=new ImageView(getActivity());
-//
-//                imageView.setLayoutParams(new ViewGroup.LayoutParams(10,10));
-//                if (i==0){
-//                    imageView.setBackgroundResource(R.drawable.icon_page_select);
-//                }
-//                else{
-//                    imageView.setBackgroundResource(R.drawable.icon_page_unselected);
-//                }
-//                LinearLayout.LayoutParams layoutParams=new LinearLayout.LayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT));
-//                layoutParams.leftMargin=10;
-//                layoutParams.rightMargin=10;
-//                viewGroup.addView(imageView,layoutParams);
-//            }
-//            currentItem=bannerAdapter.getBanners().length*50;
-//            vpBanner.setCurrentItem(currentItem);
-//            handler.postDelayed(mTicker,CAROUSEL_TIME);
+       
 
         return root;
     }
